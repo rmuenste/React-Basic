@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "@version/react-router-v3";
 
 export class Header extends React.Component {
     render() {
@@ -8,8 +9,10 @@ export class Header extends React.Component {
                     <div className="navbar-header">
                         <ul className="nav navbar-nav">
                         <li>
-                            <a href="#">Home</a>
-                            <a href="#">User</a>
+                            <Link to={"/home"} activeStyle={{color: "red"}}>Home</Link>
+                        </li>
+                        <li>
+                            <Link to={"/user/" + 2} activeStyle={{color: "red"}}>User</Link>
                         </li>
                         </ul>
                     </div>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --port 8181",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --port 8181 --history-api-fallback",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
   "keywords": [
@@ -14,9 +14,9 @@
   "author": "Raphael Muenster",
   "license": "MIT",
   "dependencies": {
+    "@version/react-router-v3": "^1.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.0"
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
